@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="now"></h1>
+    <script>
+        const clockContent = document.querySelector('.now')
+        const getTime = () => {
+            const date = new Date()
+            const clock = ''+date
+            clockContent.innerText = clock
+            clockContent.innerText = clock.slice(16,18)+'시 '+clock.slice(19,21)+'분 '+clock.slice(22,24)+'초'
+        }
+        
+        const initTime = () => {
+            getTime()
+            setInterval(getTime, 1000)
+        }
+        initTime()
+    </script>
+</body>
+</html>

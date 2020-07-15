@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const target = document.querySelector('body')
+        const getRandomColor = () => {
+            const hexa = '0123456789abcdef'
+            let randomcolor = '#'
+            for (let i = 0; i < 6; i += 1) {
+                randomcolor += hexa[Math.floor(Math.random() * 16 )]
+            }
+                return randomcolor
+            // while (i < 6) {
+            //     randomcolor += hexa[Math.floor(Math.random() * 16 )]
+            //     i += 1
+            //     return randomcolor
+            // }
+            // target.style.backgroundColor = 'blue'
+
+            // target.style.backgroundColor = hexa;
+        } 
+        
+        setInterval(() => {
+            target.style.backgroundColor = getRandomColor()
+        }, 100)
+    </script>
+</body>
+</html>
