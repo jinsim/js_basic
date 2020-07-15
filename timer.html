@@ -13,6 +13,7 @@
             const date = new Date()
             const clock = ''+date
             clockContent.innerText = clock.slice(16,18)+'시 '+clock.slice(19,21)+'분 '+clock.slice(22,24)+'초'
+            // 이렇게 하면 안되나요?? 앞에 0 있어도 밑에 꺼랑 완전 똑같이 작동은 되던데..
 
             const hours = date.getHours()
             const minutes = date.getMinutes()
